@@ -17,13 +17,25 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.1
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick 2.0
+import QtQuick.Controls 2.5
+import QtQuick.Layouts 1.0
 
-Item {
-    Grid {
-        PlasmaComponents.Label {
-            text: message
+import org.kde.kirigami 2.5 as Kirigami
+
+Kirigami.FormLayout {
+
+    property alias cfg_updateInterval: updateInterval.value
+
+    Item {
+        id: root
+
+        SpinBox {
+            id: updateInterval
+            from: 1000
+            to: 3600000
+            stepSize: 1000
+            value: updateInterval.value
         }
     }
 }

@@ -7,6 +7,4 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5Plasma REQUIRED)
 
-# TODO: adapt "org.kde.plasma" here & elsewhere if needed (see README)
-#plasma_install_package(package org.kde.plasma.bpc)
-plasma_install_package(plasmoid org.kde.plasma.bpc)
+plasma_install_package(plasmoid com.github.olitvinov.bpc)

@@ -17,13 +17,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.1
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick 2.2
 
-Item {
-    Grid {
-        PlasmaComponents.Label {
-            text: message
-        }
+import org.kde.plasma.configuration 2.0
+
+ConfigModel {
+    ConfigCategory {
+         name: i18nc("@title", "General")
+         icon: "configure"
+         source: "configGeneral.qml"
     }
 }

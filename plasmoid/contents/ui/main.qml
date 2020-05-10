@@ -37,15 +37,15 @@ Item {
         }
         xhr.send();
     }
- 
+
     Plasmoid.compactRepresentation: CompactRepresentation {}
     Plasmoid.fullRepresentation: FullRepresentation {}
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
- 
- 
+
+
     Timer {
         id: readStarter
-        interval: 10000
+        interval: plasmoid.configuration.updateInterval
         running: true
         repeat: true
         onTriggered: getPowerConsumption()
